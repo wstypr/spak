@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survei Persepsi Antikorupsi 2024</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container p-5">
+      <h1>Survei Persepsi Antikorupsi</h1>
+      <div class="lead mb-5">
+        {{ perangkat_daerah }} - Pemerintah Kabupaten Mojokerto
+      </div>
+      <form id="kuesioner" autocomplete="off">
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            class="form-control"
+            name="nama"
+            id="nama"
+            placeholder="Nama Lengkap"
+          />
+          <label for="nama">Nama Lengkap</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input
+            type="number"
+            class="form-control"
+            name="usia"
+            id="usia"
+            placeholder="Usia"
+          />
+          <label for="usia">Usia</label>
+        </div>
+
+        <div class="mb-4">
+          <label class="mb-1" for="pendidikan">Jenis Kelamin</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="laki"
+              name="jenis_kelamin"
+              value="Laki-Laki"
+            />
+            <label for="laki" class="form-check-label">Laki-Laki</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="perempuan"
+              name="jenis_kelamin"
+              value="Perempuan"
+            />
+            <label for="perempuan" class="form-check-label">Perempuan</label>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="mb-1" for="pendidikan">Pendidikan Terakhir</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="sma"
+              name="pendidikan"
+              value="SMA/Sederajat atau di bawahnya"
+            />
+            <label for="sma" class="form-check-label"
+              >SMA/Sederajat atau di bawahnya</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="d3"
+              name="pendidikan"
+              value="D1/D2/D3"
+            />
+            <label for="d3" class="form-check-label">D1/D2/D3</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="s1"
+              name="pendidikan"
+              value="D4/S1"
+            />
+            <label for="s1" class="form-check-label">D4/S1</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="s3"
+              name="pendidikan"
+              value="S2/S3"
+            />
+            <label for="s3" class="form-check-label">S2/S3</label>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="mb-1" for="pekerjaan">Pekerjaan Utama</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="pelajar"
+              name="pekerjaan"
+              value="SMA/Sederajat atau di bawahnya"
+            />
+            <label for="pelajar" class="form-check-label"
+              >Pelajar/Mahasiswa</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="dosen"
+              name="pekerjaan"
+              value="Peneliti/Dosen"
+            />
+            <label for="dosen" class="form-check-label">Peneliti/Dosen</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="pns"
+              name="pekerjaan"
+              value="PNS/TNI/Polri"
+            />
+            <label for="pns" class="form-check-label">PNS/TNI/Polri</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="bumn"
+              name="pekerjaan"
+              value="Pegawai BUMN/BUMD"
+            />
+            <label for="bumn" class="form-check-label">Pegawai BUMN/BUMD</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="swasta"
+              name="pekerjaan"
+              value="Pegawai Swasta"
+            />
+            <label for="swasta" class="form-check-label">Pegawai Swasta</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="wiraswasta"
+              name="pekerjaan"
+              value="Wiraswasta"
+            />
+            <label for="wiraswasta" class="form-check-label">Wiraswasta</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="lainnya"
+              name="pekerjaan"
+              value="Lainnya"
+            />
+            <label for="lainnya" class="form-check-label">Lainnya</label>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 1 -->
+        <input type="hidden" name="opd" id="opd" value="{{ opd }}" />
+        <div class="card mb-3">
+          <div class="card-header">Pertanyaan 1</div>
+          <div class="card-body">
+            <p class="card-title fw-bold">
+              Tidak terdapat diskriminasi pelayanan publik di {{
+              perangkat_daerah }}.
+            </p>
+            <div class="card-text">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_1"
+                  value="Setuju"
+                  id="setuju1"
+                />
+                <label class="form-check-label" for="setuju1"> Setuju </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_1"
+                  id="tidak_setuju1"
+                  value="Tidak Setuju"
+                />
+                <label class="form-check-label" for="tidak_setuju1">
+                  Tidak Setuju
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 2 -->
+        <div class="card mb-3">
+          <div class="card-header">Pertanyaan 2</div>
+          <div class="card-body">
+            <p class="card-title fw-bold">
+              Tidak ada kecurangan atau pelayanan di luar prosedur pada {{
+              perangkat_daerah }}.
+            </p>
+            <div class="card-text">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_2"
+                  value="Setuju"
+                  id="setuju2"
+                />
+                <label class="form-check-label" for="setuju2"> Setuju </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_2"
+                  id="tidak_setuju2"
+                  value="Tidak Setuju"
+                />
+                <label class="form-check-label" for="tidak_setuju2">
+                  Tidak Setuju
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 3 -->
+        <div class="card mb-3">
+          <div class="card-header">Pertanyaan 3</div>
+          <div class="card-body">
+            <p class="card-title fw-bold">
+              Tidak ada penerimaan imbalan uang/barang/fasilitas lainnya di luar
+              ketentuan pada {{ perangkat_daerah }}.
+            </p>
+            <div class="card-text">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_3"
+                  value="Setuju"
+                  id="setuju3"
+                />
+                <label class="form-check-label" for="setuju3"> Setuju </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_3"
+                  id="tidak_setuju3"
+                  value="Tidak Setuju"
+                />
+                <label class="form-check-label" for="tidak_setuju3">
+                  Tidak Setuju
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 4 -->
+        <div class="card mb-3">
+          <div class="card-header">Pertanyaan 4</div>
+          <div class="card-body">
+            <p class="card-title fw-bold">
+              Tidak ada pungutan liar pada {{ perangkat_daerah }}.
+            </p>
+            <div class="card-text">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_4"
+                  value="Setuju"
+                  id="setuju4"
+                />
+                <label class="form-check-label" for="setuju4"> Setuju </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_4"
+                  id="tidak_setuju4"
+                  value="Tidak Setuju"
+                />
+                <label class="form-check-label" for="tidak_setuju4">
+                  Tidak Setuju
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 5 -->
+        <div class="card mb-3">
+          <div class="card-header">Pertanyaan 5</div>
+          <div class="card-body">
+            <p class="card-title fw-bold lh-lg">
+              Tidak ada calo/perantara tidak resmi pada {{ perangkat_daerah }}.
+            </p>
+            <div class="card-text">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_5"
+                  value="Setuju"
+                  id="setuju5"
+                />
+                <label class="form-check-label" for="setuju5"> Setuju </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pertanyaan_5"
+                  id="tidak_setuju5"
+                  value="Tidak Setuju"
+                />
+                <label class="form-check-label" for="tidak_setuju5">
+                  Tidak Setuju
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-5">
+          Kirim Kuesioner
+        </button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const form = document.getElementById("kuesioner");
+      const url =
+        "https://script.google.com/macros/s/AKfycbyTve5CPTg7POa6uHDbAJu9-1cbkZqIxW22yimmYX5c4EMJhProZvDAuWwGXiAJ4ZFd/exec";
+
+      form.addEventListener("submit", (e) => {
+        let data = new FormData(form);
+        e.preventDefault();
+
+        console.log(data.get("nama"));
+        console.log(data.get("opd"));
+
+        fetch(url, { method: "POST", body: data })
+          .then((response) => console.log(response))
+          .catch((error) => console.log(error));
+      });
+    </script>
+  </body>
+</html>
