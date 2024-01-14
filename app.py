@@ -1,16 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
+from opd import *
 
 app = Flask(__name__)
 
-
-perangkat_daerah = {
-        "dispendukcapil" : "Dinas Kependudukan dan Pencatatan Sipil",
-        "dpmptsp" : "Dinas Penanaman Modal dan Perizinan Terpadu Satu Pintu"
-    }
-
 @app.route('/')
 def home():
-    return "Hello, my world"
+    return "SPAK 2024"
 
 @app.route('/welcome')
 def welcome():
@@ -18,7 +13,10 @@ def welcome():
 
 @app.route('/<opd>')
 def spak(opd):
-    return render_template('spak.html', perangkat_daerah=perangkat_daerah[opd], opd=opd)
+    if opd not in opdAccronym:
+        return redirect('/')
+    else:
+        return render_template('spak.html', perangkat_daerah=opdFullName[opd])
 
 
 

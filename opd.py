@@ -84,5 +84,5 @@ opdFullName = {
 
 opdAccronym = ['setda', 'setwan', 'bkpsdm', 'bakesbangpol', 'bpbd', 'bapenda', 'pembangunan', 'hukum', 'kesra', 'organisasi', 'pemerintahan', 'pbj', 'perekonomian', 'renkeu', 'prokompim', 'umum', 'disbudporapar', 'disdukcapil', 'dinkes', 'diskominfo', 'dinkopum', 'dlh', 'dispari', 'dpupr', 'dpmd', 'dpmptsp', 'dispendik', 'dp2kbp2', 'disperindag', 'disperka', 'disperta', 'dprkp2', 'dinsos', 'disnaker', 'inspektorat', 'satpolpp','rssoekandar', 'rsbasoeni', 'bangsal', 'dawarblandong', 'dlanggu', 'gedeg', 'gondang', 'jatirejo', 'jetis', 'kemlagi', 'kutorejo', 'mojoanyar', 'mojosari', 'ngoro', 'pacet', 'pungging', 'puri', 'sooko', 'trawas', 'trowulan', 'pkmdlanggu', 'pkmbangsal', 'pkmdawarblandong', 'pkmgayaman', 'pkmgedeg', 'pkmgondang', 'pkmjatirejo', 'pkmjetis', 'pkmkedungsari', 'pkmkemlagi', 'pkmkutorejo', 'pkmlespadangan', 'pkmmanduro', 'pkmmodopuro', 'pkmmojosari', 'pkmngoro', 'pkmpacet', 'pkmpandan', 'pkmpesanggrahan', 'pkmpuri', 'pkmsooko', 'pkmtawangsari', 'pkmtrawas', 'pkmtrowulan', 'pkmwatukenongo']
 
-
-print(opdFullName.keys())
+if __name__ == "__main__":
+    print(opdFullName.keys())
