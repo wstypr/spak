@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "SPAK 2024"
+    return render_template('home.html', opds=opdAccronym, opdFullName=opdFullName)
 
 @app.route('/welcome')
 def welcome():
