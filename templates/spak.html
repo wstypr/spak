@@ -57,7 +57,8 @@
       <div class="lead mb-3">
         {{ perangkat_daerah }} - Pemerintah Kabupaten Mojokerto
       </div>
-      <form id="kuesioner" autocomplete="off">
+      <!-- form -->
+      <form id="kuesioner" autocomplete="off" novalidate>
         <p class="mb-5">
           Isilah pertanyaan-pertanyaan di bawah ini dengan jujur sesuai dengan
           pengalaman anda saat mendapatkan pelayanan di {{perangkat_daerah}}
@@ -74,7 +75,9 @@
                 name="nama"
                 id="nama"
                 placeholder="Nama Lengkap"
+                required
               />
+              <div class="invalid-feedback">Nama lengkap harus diisi</div>
               <label for="nama">Nama Lengkap</label>
             </div>
 
@@ -85,7 +88,9 @@
                 name="usia"
                 id="usia"
                 placeholder="Usia"
+                required
               />
+              <div class="invalid-feedback">Usia harus diisi</div>
               <label for="usia">Usia</label>
             </div>
 
@@ -98,6 +103,7 @@
                   id="laki"
                   name="jenis_kelamin"
                   value="Laki-Laki"
+                  required
                 />
                 <label for="laki" class="form-check-label">Laki-Laki</label>
               </div>
@@ -108,10 +114,12 @@
                   id="perempuan"
                   name="jenis_kelamin"
                   value="Perempuan"
+                  required
                 />
                 <label for="perempuan" class="form-check-label"
                   >Perempuan</label
                 >
+                <div class="invalid-feedback">Jenis kelamin harus diisi</div>
               </div>
             </div>
 
@@ -124,6 +132,7 @@
                   id="sma"
                   name="pendidikan"
                   value="SMA/Sederajat atau di bawahnya"
+                  required
                 />
                 <label for="sma" class="form-check-label"
                   >SMA/Sederajat atau di bawahnya</label
@@ -136,6 +145,7 @@
                   id="d3"
                   name="pendidikan"
                   value="D1/D2/D3"
+                  required
                 />
                 <label for="d3" class="form-check-label">D1/D2/D3</label>
               </div>
@@ -146,6 +156,7 @@
                   id="s1"
                   name="pendidikan"
                   value="D4/S1"
+                  required
                 />
                 <label for="s1" class="form-check-label">D4/S1</label>
               </div>
@@ -156,8 +167,10 @@
                   id="s3"
                   name="pendidikan"
                   value="S2/S3"
+                  required
                 />
                 <label for="s3" class="form-check-label">S2/S3</label>
+                <div class="invalid-feedback">Pendidikan harus diisi</div>
               </div>
             </div>
 
@@ -170,6 +183,7 @@
                   id="pelajar"
                   name="pekerjaan"
                   value="SMA/Sederajat atau di bawahnya"
+                  required
                 />
                 <label for="pelajar" class="form-check-label"
                   >Pelajar/Mahasiswa</label
@@ -182,6 +196,7 @@
                   id="dosen"
                   name="pekerjaan"
                   value="Peneliti/Dosen"
+                  required
                 />
                 <label for="dosen" class="form-check-label"
                   >Peneliti/Dosen</label
@@ -194,6 +209,7 @@
                   id="pns"
                   name="pekerjaan"
                   value="PNS/TNI/Polri"
+                  required
                 />
                 <label for="pns" class="form-check-label">PNS/TNI/Polri</label>
               </div>
@@ -204,6 +220,7 @@
                   id="bumn"
                   name="pekerjaan"
                   value="Pegawai BUMN/BUMD"
+                  required
                 />
                 <label for="bumn" class="form-check-label"
                   >Pegawai BUMN/BUMD</label
@@ -216,6 +233,7 @@
                   id="swasta"
                   name="pekerjaan"
                   value="Pegawai Swasta"
+                  required
                 />
                 <label for="swasta" class="form-check-label"
                   >Pegawai Swasta</label
@@ -228,6 +246,7 @@
                   id="wiraswasta"
                   name="pekerjaan"
                   value="Wiraswasta"
+                  required
                 />
                 <label for="wiraswasta" class="form-check-label"
                   >Wiraswasta</label
@@ -240,8 +259,10 @@
                   id="lainnya"
                   name="pekerjaan"
                   value="Lainnya"
+                  required
                 />
                 <label for="lainnya" class="form-check-label">Lainnya</label>
+                <div class="invalid-feedback">Pekerjaan harus diisi</div>
               </div>
             </div>
           </div>
@@ -263,6 +284,7 @@
                   type="radio"
                   name="pertanyaan_1"
                   value="1"
+                  required
                   id="setuju1"
                 />
                 <label class="form-check-label" for="setuju1"> Setuju </label>
@@ -274,10 +296,14 @@
                   name="pertanyaan_1"
                   id="tidak_setuju1"
                   value="0"
+                  required
                 />
                 <label class="form-check-label" for="tidak_setuju1">
                   Tidak Setuju
                 </label>
+                <div class="invalid-feedback">
+                  Pertanyaan pertama harus diisi
+                </div>
               </div>
             </div>
           </div>
@@ -298,6 +324,7 @@
                   type="radio"
                   name="pertanyaan_2"
                   value="1"
+                  required
                   id="setuju2"
                 />
                 <label class="form-check-label" for="setuju2"> Setuju </label>
@@ -309,10 +336,12 @@
                   name="pertanyaan_2"
                   id="tidak_setuju2"
                   value="0"
+                  required
                 />
                 <label class="form-check-label" for="tidak_setuju2">
                   Tidak Setuju
                 </label>
+                <div class="invalid-feedback">Pertanyaan kedua harus diisi</div>
               </div>
             </div>
           </div>
@@ -333,6 +362,7 @@
                   type="radio"
                   name="pertanyaan_3"
                   value="1"
+                  required
                   id="setuju3"
                 />
                 <label class="form-check-label" for="setuju3"> Setuju </label>
@@ -344,10 +374,14 @@
                   name="pertanyaan_3"
                   id="tidak_setuju3"
                   value="0"
+                  required
                 />
                 <label class="form-check-label" for="tidak_setuju3">
                   Tidak Setuju
                 </label>
+                <div class="invalid-feedback">
+                  Pertanyaan ketiga harus diisi
+                </div>
               </div>
             </div>
           </div>
@@ -367,6 +401,7 @@
                   type="radio"
                   name="pertanyaan_4"
                   value="1"
+                  required
                   id="setuju4"
                 />
                 <label class="form-check-label" for="setuju4"> Setuju </label>
@@ -378,10 +413,14 @@
                   name="pertanyaan_4"
                   id="tidak_setuju4"
                   value="0"
+                  required
                 />
                 <label class="form-check-label" for="tidak_setuju4">
                   Tidak Setuju
                 </label>
+                <div class="invalid-feedback">
+                  Pertanyaan keempat harus diisi
+                </div>
               </div>
             </div>
           </div>
@@ -401,6 +440,7 @@
                   type="radio"
                   name="pertanyaan_5"
                   value="1"
+                  required
                   id="setuju5"
                 />
                 <label class="form-check-label" for="setuju5"> Setuju </label>
@@ -412,10 +452,14 @@
                   name="pertanyaan_5"
                   id="tidak_setuju5"
                   value="0"
+                  required
                 />
                 <label class="form-check-label" for="tidak_setuju5">
                   Tidak Setuju
                 </label>
+                <div class="invalid-feedback">
+                  Pertanyaan kelima harus diisi
+                </div>
               </div>
             </div>
           </div>
