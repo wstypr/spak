@@ -23,7 +23,9 @@
 
       <div class="list-group">
         {% for opd in opds %}
-        <a href="/{{opd}}" class="list-group-item list-group-item-action"
+        <a
+          href="/{{opd}}"
+          class="list-group-item list-group-item-action list-group-item-primary"
           >{{opdFullName[opd]}}</a
         >
         {% endfor %}
